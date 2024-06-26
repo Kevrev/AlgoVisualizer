@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Visualizer from './Visualizer';
+import Visualizer from './Visualizer/Visualizer';
 
 function App() {
 
-  const name = "template literal"
-
   return (
     <div className="App">
-      <Visualizer></Visualizer>
+      <Visualizer />
     </div>
   );
 }
