@@ -1,19 +1,22 @@
 function Visualizer() {
   let array = [];
+
+  const arrayRandom = (min, max) => {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
   const arraypush = (array) => {
-    for (let i = 0; i < 100; i++) {
-      array.push('test');
+    for (let i = 0; i < 75; i++) {
+      array.push(arrayRandom(1, 800));
     }
     return array;
   };
-  console.log(arraypush(array));
-
-  const test = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+  arraypush(array);
 
   return (
     <>
       <div className="array-container">
-        {test.map((value, index) => (
+        {array.map((value, index) => (
           <div
             key={index}
             className="array-block"
