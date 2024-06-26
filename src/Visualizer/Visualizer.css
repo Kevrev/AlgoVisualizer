@@ -1,0 +1,12 @@
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.array-block {
+  padding: 1px;
+  margin: 5px;
+  width: 10px;
+  background-color: rgb(103, 119, 91);
+}

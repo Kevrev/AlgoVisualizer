@@ -1,13 +1,15 @@
 function Visualizer() {
-  const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const test = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
   return (
     <>
-      {test.map((value, index) => (
-        <div key={index}>
-          <h1>{value}</h1>
-        </div>
-      ))}
+      <div className="array-container">
+        {test.map((value, index) => (
+          <div key={index} className="array-block" style={{height: `${value}px`}}>
+            {/* <h1>{value}</h1> */}
+          </div>
+        ))}
+      </div>
     </>
   );
 }
