@@ -21,9 +21,7 @@ const Visualizer = () => {
   }, []);
 
   const handleBubbleSort = () => {
-    const sortedArray = bubbleSort([...array]); // Create a copy of array to avoid mutating state
-    setArray(sortedArray);
-    console.log('Sorted Array:', sortedArray);
+    setArray(bubbleSort([...array]))
   };
 
   return (
