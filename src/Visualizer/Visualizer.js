@@ -8,7 +8,7 @@ const Visualizer = () => {
   };
 
   const arrayPush = () => {
-    const newArray =[];
+    const newArray = [];
     for (let i = 0; i < 75; i++) {
       newArray.push(arrayRandom(1, 800));
     }
@@ -21,18 +21,20 @@ const Visualizer = () => {
 
   return (
     <>
-      <button onClick={arrayPush}>Generate</button>
       <div className="array-container">
-        {array.map((value, index) => (
-          <div
-            key={index}
-            className="array-block"
-            style={{ height: `${value}px` }}
-          ></div>
-        ))}
+        <div className="array-list">
+          {array.map((value, index) => (
+            <div
+              key={index}
+              className="array-block"
+              style={{ height: `${value}px` }}
+            ></div>
+          ))}
+        </div>
       </div>
+        <button onClick={arrayPush}>Generate</button>
     </>
   );
-}
+};
 
 export default Visualizer;

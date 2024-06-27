@@ -1,6 +1,13 @@
 .array-container {
+  height: 850px;
+  background-color: rgb(179, 197, 235);
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+}
+
+.array-list {
+  display: flex;
   align-items: flex-end;
 }
 
