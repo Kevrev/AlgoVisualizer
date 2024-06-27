@@ -8,7 +8,7 @@ const bubbleSort = (array) => {
       }
     }
   }
-  console.log(array);
+ return array;
 };
 
 export default bubbleSort;

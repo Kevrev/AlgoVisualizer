@@ -20,6 +20,12 @@ const Visualizer = () => {
     generateArray();
   }, []);
 
+  const handleBubbleSort = () => {
+    const sortedArray = bubbleSort([...array]); // Create a copy of array to avoid mutating state
+    setArray(sortedArray);
+    console.log('Sorted Array:', sortedArray);
+  };
+
   return (
     <>
       <div className="array-container">
@@ -34,7 +40,7 @@ const Visualizer = () => {
         </div>
       </div>
       <button onClick={generateArray}>Generate</button>
-      <button onClick={generateArray}>Bubblesort console test</button>
+      <button onClick={handleBubbleSort}>Bubblesort console test</button>
     </>
   );
 };
