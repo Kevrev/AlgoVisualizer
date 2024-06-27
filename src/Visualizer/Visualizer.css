@@ -1,6 +1,5 @@
 .array-container {
-  height: 850px;
-  background-color: rgb(179, 197, 235);
+  height: 825px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
