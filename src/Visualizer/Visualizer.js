@@ -1,20 +1,27 @@
-function Visualizer() {
-  let array = [];
+import { useState, useEffect } from 'react';
+
+const Visualizer = () => {
+  const [array, setArray] = useState([]);
 
   const arrayRandom = (min, max) => {
-    return Math.floor(Math.random() * (max - min) ) + min;
-  }
-
-  const arraypush = (array) => {
-    for (let i = 0; i < 75; i++) {
-      array.push(arrayRandom(1, 800));
-    }
-    return array;
+    return Math.floor(Math.random() * (max - min)) + min;
   };
-  arraypush(array);
+
+  const arrayPush = () => {
+    const newArray =[];
+    for (let i = 0; i < 75; i++) {
+      newArray.push(arrayRandom(1, 800));
+    }
+    setArray(newArray);
+  };
+
+  useEffect(() => {
+    arrayPush();
+  }, []);
 
   return (
     <>
+      <button onClick={arrayPush}>Generate</button>
       <div className="array-container">
         {array.map((value, index) => (
           <div
