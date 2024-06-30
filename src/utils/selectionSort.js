@@ -6,9 +6,9 @@ const selectionSort = array => {
       if (array[j] < array[minIndex]) {
         minIndex = j;
       }
-      [array[i], array[minIndex]] =
-      [array[minIndex], array[i]]
     }
+    [array[i], array[minIndex]] =
+    [array[minIndex], array[i]]
   }
   return array
 };
