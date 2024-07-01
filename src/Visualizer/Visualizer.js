@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
+import insertionSort from '../utils/insertionSort';
 
 const Visualizer = () => {
   const [array, setArray] = useState([]);
@@ -33,6 +34,12 @@ const Visualizer = () => {
     setArray(sortedArray)
   };
 
+  const handleInsertionSort = () => {
+    const sortedArray = insertionSort([...array]);
+
+    setArray(sortedArray)
+  };
+
   return (
     <>
       <div className="array-container">
@@ -47,8 +54,9 @@ const Visualizer = () => {
         </div>
       </div>
       <button onClick={generateArray}>Generate</button>
-      <button onClick={handleBubbleSort}>Bubblesort console test</button>
-      <button onClick={handleSelectionSort}>Selectionsort console test</button>
+      <button onClick={handleBubbleSort}>Bubble Sort</button>
+      <button onClick={handleSelectionSort}>Selection Sort</button>
+      <button onClick={handleInsertionSort}>Insertion Sort</button>
     </>
   );
 };
