@@ -3,6 +3,8 @@ import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
 import insertionSort from '../utils/insertionSort';
 import mergeSort from '../utils/mergeSort';
+import heapSort from '../utils/heapSort';
+import quickSort from '../utils/quickSort';
 
 const Visualizer = () => {
   const [array, setArray] = useState([]);
@@ -26,27 +28,38 @@ const Visualizer = () => {
   const handleBubbleSort = () => {
     const sortedArray = bubbleSort([...array]);
 
-    setArray(sortedArray)
+    setArray(sortedArray);
   };
 
   const handleSelectionSort = () => {
     const sortedArray = selectionSort([...array]);
 
-    setArray(sortedArray)
+    setArray(sortedArray);
   };
 
   const handleInsertionSort = () => {
     const sortedArray = insertionSort([...array]);
 
-    setArray(sortedArray)
+    setArray(sortedArray);
   };
 
   const handleMergeSort = () => {
     const sortedArray = mergeSort([...array]);
 
-    setArray(sortedArray)
+    setArray(sortedArray);
   };
 
+  const handleHeapSort = () => {
+    const sortedArray = heapSort([...array]);
+
+    setArray(sortedArray);
+  };
+
+  const handlequickSort = () => {
+    const sortedArray = quickSort([...array]);
+
+    setArray(sortedArray);
+  };
 
   return (
     <>
@@ -66,6 +79,9 @@ const Visualizer = () => {
       <button onClick={handleSelectionSort}>Selection Sort</button>
       <button onClick={handleInsertionSort}>Insertion Sort</button>
       <button onClick={handleMergeSort}>Merge Sort</button>
+      <button onClick={handleHeapSort}>Heap Sort</button>
+      <button onClick={handlequickSort}>Quick Sort</button>
+
     </>
   );
 };
