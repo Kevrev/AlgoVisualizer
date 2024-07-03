@@ -25,38 +25,8 @@ const Visualizer = () => {
     generateArray();
   }, []);
 
-  const handleBubbleSort = () => {
-    const sortedArray = bubbleSort([...array]);
-
-    setArray(sortedArray);
-  };
-
-  const handleSelectionSort = () => {
-    const sortedArray = selectionSort([...array]);
-
-    setArray(sortedArray);
-  };
-
-  const handleInsertionSort = () => {
-    const sortedArray = insertionSort([...array]);
-
-    setArray(sortedArray);
-  };
-
-  const handleMergeSort = () => {
-    const sortedArray = mergeSort([...array]);
-
-    setArray(sortedArray);
-  };
-
-  const handleHeapSort = () => {
-    const sortedArray = heapSort([...array]);
-
-    setArray(sortedArray);
-  };
-
-  const handlequickSort = () => {
-    const sortedArray = quickSort([...array]);
+  const handleSort = sort => {
+    const sortedArray = sort([...array]);
 
     setArray(sortedArray);
   };
@@ -75,13 +45,12 @@ const Visualizer = () => {
         </div>
       </div>
       <button onClick={generateArray}>Generate</button>
-      <button onClick={handleBubbleSort}>Bubble Sort</button>
-      <button onClick={handleSelectionSort}>Selection Sort</button>
-      <button onClick={handleInsertionSort}>Insertion Sort</button>
-      <button onClick={handleMergeSort}>Merge Sort</button>
-      <button onClick={handleHeapSort}>Heap Sort</button>
-      <button onClick={handlequickSort}>Quick Sort</button>
-
+      <button onClick={() => handleSort(bubbleSort)}>Bubble Sort</button>
+      <button onClick={() => handleSort(selectionSort)}>Selection Sort</button>
+      <button onClick={() => handleSort(insertionSort)}>Insertion Sort</button>
+      <button onClick={() => handleSort(heapSort)}>Heap Sort</button>
+      <button onClick={() => handleSort(mergeSort)}>Merge Sort</button>
+      <button onClick={() => handleSort(quickSort)}>Quick Sort</button>
     </>
   );
 };
