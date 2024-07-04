@@ -1,5 +1,12 @@
+.interactives-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: rgb(168, 168, 195);
+}
+
 .array-container {
-  height: 825px;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: flex-end;

@@ -17,7 +17,7 @@ const Visualizer = () => {
   const generateArray = () => {
     const newArray = [];
     for (let i = 0; i < range; i++) {
-      newArray.push(arrayRandom(1, 800));
+      newArray.push(arrayRandom(1, 700));
     }
     setArray(newArray);
   };
@@ -39,9 +39,9 @@ const Visualizer = () => {
 
   return (
     <>
-      <div>
-        <div>
-          <div class="slide-container">
+      <div className="interactives-container">
+        <div className="left-container">
+          <div className="slide-container">
             <input
               type="range"
               min="1"
@@ -51,9 +51,10 @@ const Visualizer = () => {
               id="myRange"
               onChange={handleSliderChange}
             />
+            <div>{range} Blocks</div>
           </div>
         </div>
-        <div>
+        <div className="button-container">
           <button onClick={generateArray}>Generate</button>
           {/* <button onClick={handleBubbleSort}>Bubble Sort</button>
         <button onClick={handleSelectionSort}>Selection Sort</button>
