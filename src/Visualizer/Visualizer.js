@@ -9,6 +9,7 @@ import quickSort from '../utils/quickSort';
 const Visualizer = () => {
   const [array, setArray] = useState([]);
   const [range, setRange] = useState(75);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const arrayRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -39,7 +40,7 @@ const Visualizer = () => {
 
   const handleSort = async (sort) => {
     const arrayCopy = [...array];
-    await sort(arrayCopy, setArray);
+    await sort(arrayCopy, setArray, setActiveIndex);
   };
 
   return (
@@ -85,7 +86,8 @@ const Visualizer = () => {
             <div
               key={index}
               className="array-block"
-              style={{ height: `${value}px` }}
+              style={{ height: `${value}px`,
+              backgroundColor: activeIndex === index ? 'red' : '' }} 
             ></div>
           ))}
         </div>
