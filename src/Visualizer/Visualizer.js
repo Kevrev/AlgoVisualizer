@@ -31,10 +31,15 @@ const Visualizer = () => {
     setRange(value);
   };
 
-  const handleSort = (sort) => {
-    const sortedArray = sort([...array]);
+  // const handleSort = (sort) => {
+  //   const sortedArray = sort([...array]);
 
-    setArray(sortedArray);
+  //   setArray(sortedArray);
+  // };
+
+  const handleSort = async (sort) => {
+    const arrayCopy = [...array];
+    await sort(arrayCopy, setArray);
   };
 
   return (
