@@ -82,7 +82,7 @@ const heapSort = async (array, setArray, setActiveIndex) => {
       [array[0], array[i]] = [array[i], array[0]];
       heapify(array, i, 0);
       setArray([...array]);
-      await new Promise(resolve => setTimeout(resolve, 3));
+      await new Promise(resolve => setTimeout(resolve, 25));
     }
     setActiveIndex(null);
   };

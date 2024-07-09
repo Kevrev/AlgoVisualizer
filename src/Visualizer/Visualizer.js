@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
 import insertionSort from '../utils/insertionSort';
@@ -10,6 +10,7 @@ const Visualizer = () => {
   const [array, setArray] = useState([]);
   const [range, setRange] = useState(75);
   const [activeIndex, setActiveIndex] = useState(null);
+  const breakSortingRef = useRef(false);
 
   const arrayRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -39,8 +40,13 @@ const Visualizer = () => {
   // };
 
   const handleSort = async (sort) => {
+    breakSortingRef.current = false;
     const arrayCopy = [...array];
-    await sort(arrayCopy, setArray, setActiveIndex);
+    await sort(arrayCopy, setArray, setActiveIndex, breakSortingRef);
+  };
+
+  const stopSorting = () => {
+    breakSortingRef.current = true;
   };
 
   return (
@@ -53,7 +59,7 @@ const Visualizer = () => {
               min="1"
               max="150"
               value={range}
-              class="slider"
+              className="slider"
               id="myRange"
               onChange={handleSliderChange}
             />
@@ -61,6 +67,7 @@ const Visualizer = () => {
           </div>
         </div>
         <div className="button-container">
+        <button onClick={stopSorting}>Stop Sort</button>
           <button onClick={generateArray}>Generate</button>
           {/* <button onClick={handleBubbleSort}>Bubble Sort</button>
         <button onClick={handleSelectionSort}>Selection Sort</button>
