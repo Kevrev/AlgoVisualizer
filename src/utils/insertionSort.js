@@ -20,13 +20,12 @@ const insertionSort = async (array, setArray, setActiveIndex) => {
     let current = array[i];
     let j = i - 1;
 
- await new Promise(resolve => setTimeout(resolve, 3));
-
     while (j >= 0 && array[j] > current) {
       setActiveIndex(j);
       array[j + 1] = array[j];
       setArray([...array]);
       j--;
+      await new Promise(resolve => setTimeout(resolve, 3));
     }
   array[j + 1] = current;
   }
