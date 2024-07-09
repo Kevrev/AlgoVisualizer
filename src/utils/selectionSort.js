@@ -17,11 +17,15 @@
 // export default selectionSort;
 
 
-const selectionSort = async (array, setArray, setActiveIndex) => {
+const selectionSort = async (array, setArray, setActiveIndex, breakSortingRef) => {
   let n = array.length;
   for (let i = 0; i < n - 1; i++) {
     let minIndex = i;
     for (let j = i + 1; j < n; j++) {
+      if (breakSortingRef.current) {
+        setActiveIndex(null);
+        return; 
+      }
 
       await new Promise(resolve => setTimeout(resolve, 3));
       

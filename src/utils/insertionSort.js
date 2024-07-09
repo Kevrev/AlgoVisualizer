@@ -14,9 +14,14 @@
 
 // export default insertionSort;
 
-const insertionSort = async (array, setArray, setActiveIndex) => {
+const insertionSort = async (array, setArray, setActiveIndex, breakSortingRef) => {
   let n = array.length;
   for (let i = 1; i < n; i++) {
+    if (breakSortingRef.current) {
+      setActiveIndex(null);
+      return; 
+    }
+
     let current = array[i];
     let j = i - 1;
 

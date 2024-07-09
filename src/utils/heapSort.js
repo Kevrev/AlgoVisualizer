@@ -44,7 +44,7 @@
 
 // export default heapSort;
 
-const heapSort = async (array, setArray, setActiveIndex) => {
+const heapSort = async (array, setArray, setActiveIndex, breakSortingRef) => {
   const buildMaxHeap = (array) => {
     let n = array.length;
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
@@ -78,6 +78,11 @@ const heapSort = async (array, setArray, setActiveIndex) => {
     buildMaxHeap(array);
 
     for (let i = n - 1; i > 0; i--) {
+      if (breakSortingRef.current) {
+        setActiveIndex(null);
+        return; 
+      }
+      
       setActiveIndex(i);
       [array[0], array[i]] = [array[i], array[0]];
       heapify(array, i, 0);
