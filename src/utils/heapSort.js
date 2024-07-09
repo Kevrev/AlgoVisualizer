@@ -92,7 +92,7 @@ const heapSort = async (array, setArray, setActiveIndex, breakSortingRef) => {
     setActiveIndex(null);
   };
 
-  sort(array);
+  await sort(array);
 };
 
 export default heapSort;

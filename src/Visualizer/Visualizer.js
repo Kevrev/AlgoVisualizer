@@ -10,6 +10,7 @@ const Visualizer = () => {
   const [array, setArray] = useState([]);
   const [range, setRange] = useState(75);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [isSorting, setIsSorting] = useState(false);
   const breakSortingRef = useRef(false);
 
   const arrayRandom = (min, max) => {
@@ -40,13 +41,16 @@ const Visualizer = () => {
   // };
 
   const handleSort = async (sort) => {
+    setIsSorting(true);
     breakSortingRef.current = false;
     const arrayCopy = [...array];
     await sort(arrayCopy, setArray, setActiveIndex, breakSortingRef);
+    setIsSorting(false);
   };
 
   const stopSorting = () => {
     breakSortingRef.current = true;
+    setIsSorting(false);
   };
 
   return (
@@ -67,24 +71,56 @@ const Visualizer = () => {
           </div>
         </div>
         <div className="button-container">
-        <button onClick={stopSorting}>Stop Sort</button>
+          <button
+            onClick={stopSorting}
+            disabled={!isSorting}
+            style={{}}
+          >
+            Stop Sort
+          </button>
           <button onClick={generateArray}>Generate</button>
-          {/* <button onClick={handleBubbleSort}>Bubble Sort</button>
-        <button onClick={handleSelectionSort}>Selection Sort</button>
-        <button onClick={handleInsertionSort}>Insertion Sort</button>
-        <button onClick={handleMergeSort}>Merge Sort</button>
-        <button onClick={handleHeapSort}>Heap Sort</button>
-        <button onClick={handlequickSort}>Quick Sort</button> */}
-          <button onClick={() => handleSort(bubbleSort)}>Bubble Sort</button>
-          <button onClick={() => handleSort(selectionSort)}>
+          <button
+            onClick={() => handleSort(bubbleSort)}
+            disabled={isSorting}
+            
+          >
+            Bubble Sort
+          </button>
+          <button
+            onClick={() => handleSort(selectionSort)}
+            disabled={isSorting}
+            
+          >
             Selection Sort
           </button>
-          <button onClick={() => handleSort(insertionSort)}>
+          <button
+            onClick={() => handleSort(insertionSort)}
+            disabled={isSorting}
+            
+          >
             Insertion Sort
           </button>
-          <button onClick={() => handleSort(heapSort)}>Heap Sort</button>
-          <button onClick={() => handleSort(mergeSort)}>Merge Sort</button>
-          <button onClick={() => handleSort(quickSort)}>Quick Sort</button>
+          <button
+            onClick={() => handleSort(heapSort)}
+            disabled={isSorting}
+            
+          >
+            Heap Sort
+          </button>
+          <button
+            onClick={() => handleSort(mergeSort)}
+            disabled={isSorting}
+            
+          >
+            Merge Sort
+          </button>
+          <button
+            onClick={() => handleSort(quickSort)}
+            disabled={isSorting}
+            
+          >
+            Quick Sort
+          </button>
         </div>
       </div>
       <div className="array-container">
@@ -93,8 +129,10 @@ const Visualizer = () => {
             <div
               key={index}
               className="array-block"
-              style={{ height: `${value}px`,
-              backgroundColor: activeIndex === index ? 'red' : '' }} 
+              style={{
+                height: `${value}px`,
+                backgroundColor: activeIndex === index ? 'red' : '',
+              }}
             ></div>
           ))}
         </div>
