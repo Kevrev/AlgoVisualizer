@@ -66,6 +66,7 @@ const Visualizer = () => {
               className="slider"
               id="myRange"
               onChange={handleSliderChange}
+              disabled={isSorting}
             />
             <div>{range} Blocks</div>
           </div>
