@@ -26,6 +26,7 @@ const insertionSort = async (array, setArray, setActiveIndex, breakSortingRef) =
     let j = i - 1;
 
     // TODO: Fix broken animation. Sorting algo is okay but visually clones last value when sorting [3, 2, 1] -> [2, 2, 3]
+    while (j >= 0 && array[j] > current) {
       setActiveIndex(j);
       array[j + 1] = array[j];
       setArray([...array]);
