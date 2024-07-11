@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { MDBRange } from 'mdb-react-ui-kit';
+import { MDBRange, MDBBtn } from 'mdb-react-ui-kit';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
 import insertionSort from '../utils/insertionSort';
@@ -63,7 +63,7 @@ const Visualizer = () => {
         <div className="left-container">
           <div className="slide-container">
             <MDBRange
-            disableTooltip 
+              disableTooltip
               type="range"
               min="10"
               max="160"
@@ -76,43 +76,68 @@ const Visualizer = () => {
             <div>{range} Blocks</div>
           </div>
         </div>
-        <button onClick={generateArray} disabled={isSorting}>
+        <MDBBtn
+          
+          className="text-dark"
+          color="warning"
+          onClick={generateArray}
+          disabled={isSorting}
+        >
           Regenerate
-        </button>
-            <button onClick={stopSorting} disabled={!isSorting} style={{}}>
-              Stop Sorting
-            </button>
+        </MDBBtn>
+        <MDBBtn
+          
+          className="mx-2"
+          color="danger"
+          onClick={stopSorting}
+          disabled={!isSorting}
+          style={{}}
+        >
+          Stop Sorting
+        </MDBBtn>
         <div className="button-container">
-          <button
+          <MDBBtn
+            
+            className="text-dark"
+            color="light"
             onClick={() => handleSort(bubbleSort, 'Bubble Sort')}
             disabled={isSorting}
           >
             Bubble Sort
-          </button>
-          <button
+          </MDBBtn>
+          <MDBBtn
+            
+            className="text-dark"
+            color="light"
             onClick={() => handleSort(selectionSort, 'Selection Sort')}
             disabled={isSorting}
           >
             Selection Sort
-          </button>
-          <button
+          </MDBBtn>
+          <MDBBtn
+            
+            className="text-dark"
+            color="light"
             onClick={() => handleSort(insertionSort, 'Insertion Sort')}
             disabled={isSorting}
           >
             Insertion Sort
-          </button>
-          <button
+          </MDBBtn>
+          <MDBBtn
+            
+            className="text-dark"
+            color="light"
             onClick={() => handleSort(heapSort, 'Heap Sort')}
             disabled={isSorting}
           >
             Heap Sort
-          </button>
-          {/* <button onClick={() => handleSort(mergeSort, 'Merge Sort')} disabled={isSorting}>
+          </MDBBtn>
+          {/* <MDBBtn onClick={() => handleSort(mergeSort, 'Merge Sort')} disabled={isSorting}>
             Merge Sort
-          </button>
-          <button onClick={() => handleSort(quickSort, 'Quick Sort')} disabled={isSorting}>
+          </MDBBtn>
+          <MDBBtn onClick={() => handleSort(quickSort, 'Quick Sort')} disabled={isSorting}>
             Quick Sort
-          </button> */}
+          </MDBBtn> */}
         </div>
       </div>
       <div className="selected-sort">

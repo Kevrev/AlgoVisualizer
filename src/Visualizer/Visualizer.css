@@ -47,6 +47,18 @@
   font-size: 2rem;
 }
 
-.no-tooltip .thumb-value {
-  display: none !important;
+.btn-light:disabled { 
+  background-color: rgb(187, 183, 183);
+  box-shadow: none;
+}
+
+.btn-warning:disabled {
+  background-color: rgb(187, 183, 183);
+  box-shadow: none;
+}
+
+.btn-danger:disabled { 
+  color: white;
+  background-color: rgb(142, 77, 77);
+  box-shadow: none;
 }
