@@ -22,7 +22,7 @@ const Visualizer = () => {
   const generateArray = () => {
     const newArray = [];
     for (let i = 0; i < range; i++) {
-      newArray.push(arrayRandom(1, 700));
+      newArray.push(arrayRandom(1, 650));
     }
     setArray(newArray);
   };

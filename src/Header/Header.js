@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="header-content-container">
         <div className="web-logo">
-          <div className="web-title">AlgoVision</div>
+          <div className="web-title">AlgoVisualizer</div>
           <div className="web-array">
             <div className="web-block" style={{
                 height: '12px',

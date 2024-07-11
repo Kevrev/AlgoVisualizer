@@ -22,10 +22,11 @@
 }
 
 .array-container {
-  height: 775px;
+  height: 725px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 .array-list {
@@ -63,8 +64,10 @@
 }
 
 .sort-banner {
+  margin-top: 12px;
   color: white;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .btn-light:disabled { 

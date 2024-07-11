@@ -4,6 +4,8 @@ import Header from './Header/Header'
 import './Header/Header.css';
 import Visualizer from './Visualizer/Visualizer';
 import './Visualizer/Visualizer.css';
+import Footer from './Footer/Footer'
+import './Footer/Footer.css';
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <Visualizer />
+      <Footer />
     </div>
   );
 }
