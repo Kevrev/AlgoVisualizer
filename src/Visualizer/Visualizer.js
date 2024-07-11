@@ -85,30 +85,30 @@ const Visualizer = () => {
             Bubble Sort
           </button>
           <button
-            onClick={() => handleSort(selectionSort)}
+            onClick={() => handleSort(selectionSort, 'Selection Sort')}
             disabled={isSorting}
           >
             Selection Sort
           </button>
           <button
-            onClick={() => handleSort(insertionSort)}
+            onClick={() => handleSort(insertionSort, 'Insertion Sort')}
             disabled={isSorting}
           >
             Insertion Sort
           </button>
-          <button onClick={() => handleSort(heapSort)} disabled={isSorting}>
+          <button onClick={() => handleSort(heapSort,'Heap Sort')} disabled={isSorting}>
             Heap Sort
           </button>
-          <button onClick={() => handleSort(mergeSort)} disabled={isSorting}>
+          {/* <button onClick={() => handleSort(mergeSort, 'Merge Sort')} disabled={isSorting}>
             Merge Sort
           </button>
-          <button onClick={() => handleSort(quickSort)} disabled={isSorting}>
+          <button onClick={() => handleSort(quickSort, 'Quick Sort')} disabled={isSorting}>
             Quick Sort
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="selected-sort">
-        {isSorting && <p>{selectedSort} in progress</p>}
+        {isSorting && <p>{selectedSort}</p>}
         {isSorting && (
           <button onClick={stopSorting} style={{}}>
             Stop Sorting
