@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { MDBRange } from 'mdb-react-ui-kit';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
 import insertionSort from '../utils/insertionSort';
@@ -61,7 +62,8 @@ const Visualizer = () => {
       <div className="interactives-container">
         <div className="left-container">
           <div className="slide-container">
-            <input
+            <MDBRange
+            disableTooltip 
               type="range"
               min="10"
               max="160"
