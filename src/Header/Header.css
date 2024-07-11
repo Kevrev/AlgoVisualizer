@@ -1,0 +1,33 @@
+.header-content-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px
+}
+
+.web-logo {
+  display: flex;
+  justify-content: between;
+  gap: 10px;
+  align-items: center;
+}
+
+.web-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.web-array {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.web-block {
+  width: 4px;
+}
+
+.social-icon-container a {
+  padding: 5px;
+  font-size: 1.3rem;
+}

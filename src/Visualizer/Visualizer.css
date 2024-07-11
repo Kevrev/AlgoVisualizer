@@ -50,6 +50,11 @@
   padding-right: 25px;
 }
 
+.slider-text {
+  color: white;
+  font-weight: bold;
+}
+
 .selected-sort {
   display: flex;
   margin: auto;
