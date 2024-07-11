@@ -1,8 +1,9 @@
 .interactives-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 15px;
-  background-color: rgb(168, 168, 195);
+  gap: 10px;
+  background-color: #a8a8c3;
 }
 
 .array-container {
@@ -21,6 +22,20 @@
   padding: 1px;
   margin: 2px;
   width: 5px;
-  background-color: rgb(103, 119, 91);
+  background-color: #5e779c;
   
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+}
+
+.slide-container {
+  padding-right: 25px;
+}
+
+.selected-sort {
+  color: white;
+  font-size: 2rem;
 }

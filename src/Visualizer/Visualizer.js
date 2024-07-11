@@ -8,9 +8,10 @@ import quickSort from '../utils/quickSort';
 
 const Visualizer = () => {
   const [array, setArray] = useState([]);
-  const [range, setRange] = useState(75);
+  const [range, setRange] = useState(85);
   const [activeIndex, setActiveIndex] = useState(null);
   const [isSorting, setIsSorting] = useState(false);
+  const [selectedSort, setSelectedSort] = useState('');
   const breakSortingRef = useRef(false);
 
   const arrayRandom = (min, max) => {
@@ -40,12 +41,14 @@ const Visualizer = () => {
   //   setArray(sortedArray);
   // };
 
-  const handleSort = async (sort) => {
+  const handleSort = async (sort, sortName) => {
+    setSelectedSort(sortName);
     setIsSorting(true);
     breakSortingRef.current = false;
     const arrayCopy = [...array];
     await sort(arrayCopy, setArray, setActiveIndex, breakSortingRef);
     setIsSorting(false);
+    setSelectedSort('');
   };
 
   const stopSorting = () => {
@@ -60,8 +63,8 @@ const Visualizer = () => {
           <div className="slide-container">
             <input
               type="range"
-              min="1"
-              max="150"
+              min="10"
+              max="160"
               value={range}
               className="slider"
               id="myRange"
@@ -71,14 +74,14 @@ const Visualizer = () => {
             <div>{range} Blocks</div>
           </div>
         </div>
+        <button onClick={generateArray} disabled={isSorting}>
+          Regenerate
+        </button>
         <div className="button-container">
-          <button onClick={stopSorting} disabled={!isSorting} style={{}}>
-            Stop Sort
-          </button>
-          <button onClick={generateArray} disabled={isSorting}>
-            Generate
-          </button>
-          <button onClick={() => handleSort(bubbleSort)} disabled={isSorting}>
+          <button
+            onClick={() => handleSort(bubbleSort, 'Bubble Sort')}
+            disabled={isSorting}
+          >
             Bubble Sort
           </button>
           <button
@@ -104,6 +107,14 @@ const Visualizer = () => {
           </button>
         </div>
       </div>
+      <div className="selected-sort">
+        {isSorting && <p>{selectedSort} in progress</p>}
+        {isSorting && (
+          <button onClick={stopSorting} style={{}}>
+            Stop Sorting
+          </button>
+        )}
+      </div>
       <div className="array-container">
         <div className="array-list">
           {array.map((value, index) => (
@@ -112,7 +123,8 @@ const Visualizer = () => {
               className="array-block"
               style={{
                 height: `${value}px`,
-                backgroundColor: activeIndex === index ? 'red' : '',
+                backgroundColor:
+                  activeIndex === index ? 'rgb(240, 70, 70)' : '',
               }}
             ></div>
           ))}
