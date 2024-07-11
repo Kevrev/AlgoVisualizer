@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
 import insertionSort from '../utils/insertionSort';
-import mergeSort from '../utils/mergeSort';
 import heapSort from '../utils/heapSort';
+import mergeSort from '../utils/mergeSort';
 import quickSort from '../utils/quickSort';
 
 const Visualizer = () => {
