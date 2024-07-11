@@ -6,6 +6,21 @@
   background-color: #363a40;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  background-color: #363a40;
+  gap: 25px
+}
+
+.regen-stop-container {
+  margin-right: 10px;
+}
+
+.custom-btn {
+  margin: 2px
+}
+
 .array-container {
   height: 775px;
   display: flex;

@@ -76,68 +76,75 @@ const Visualizer = () => {
             <div>{range} Blocks</div>
           </div>
         </div>
-        <MDBBtn
-          
-          className="text-dark"
-          color="warning"
-          onClick={generateArray}
-          disabled={isSorting}
-        >
-          Regenerate
-        </MDBBtn>
-        <MDBBtn
-          
-          className="mx-2"
-          color="danger"
-          onClick={stopSorting}
-          disabled={!isSorting}
-          style={{}}
-        >
-          Stop Sorting
-        </MDBBtn>
         <div className="button-container">
-          <MDBBtn
-            
-            className="text-dark"
-            color="light"
-            onClick={() => handleSort(bubbleSort, 'Bubble Sort')}
-            disabled={isSorting}
-          >
-            Bubble Sort
-          </MDBBtn>
-          <MDBBtn
-            
-            className="text-dark"
-            color="light"
-            onClick={() => handleSort(selectionSort, 'Selection Sort')}
-            disabled={isSorting}
-          >
-            Selection Sort
-          </MDBBtn>
-          <MDBBtn
-            
-            className="text-dark"
-            color="light"
-            onClick={() => handleSort(insertionSort, 'Insertion Sort')}
-            disabled={isSorting}
-          >
-            Insertion Sort
-          </MDBBtn>
-          <MDBBtn
-            
-            className="text-dark"
-            color="light"
-            onClick={() => handleSort(heapSort, 'Heap Sort')}
-            disabled={isSorting}
-          >
-            Heap Sort
-          </MDBBtn>
-          {/* <MDBBtn onClick={() => handleSort(mergeSort, 'Merge Sort')} disabled={isSorting}>
-            Merge Sort
-          </MDBBtn>
-          <MDBBtn onClick={() => handleSort(quickSort, 'Quick Sort')} disabled={isSorting}>
-            Quick Sort
-          </MDBBtn> */}
+          <div className="regen-stop-container">
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="warning"
+              onClick={generateArray}
+              disabled={isSorting}
+            >
+              Regenerate
+            </MDBBtn>
+            <MDBBtn
+              className="custom-btn"
+              color="danger"
+              onClick={stopSorting}
+              disabled={!isSorting}
+            >
+              Stop Sorting
+            </MDBBtn>
+          </div>
+          <div className="sort-container">
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(bubbleSort, 'Bubble Sort')}
+              disabled={isSorting}
+            >
+              Bubble Sort
+            </MDBBtn>
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(selectionSort, 'Selection Sort')}
+              disabled={isSorting}
+            >
+              Selection Sort
+            </MDBBtn>
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(insertionSort, 'Insertion Sort')}
+              disabled={isSorting}
+            >
+              Insertion Sort
+            </MDBBtn>
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(heapSort, 'Heap Sort')}
+              disabled={isSorting}
+            >
+              Heap Sort
+            </MDBBtn>
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(mergeSort, 'Merge Sort')}
+              disabled={isSorting}
+            >
+              Merge Sort
+            </MDBBtn>
+            <MDBBtn
+              className="text-dark custom-btn"
+              color="light"
+              onClick={() => handleSort(quickSort, 'Quick Sort')}
+              disabled={isSorting}
+            >
+              Quick Sort
+            </MDBBtn>
+          </div>
         </div>
       </div>
       <div className="selected-sort">
