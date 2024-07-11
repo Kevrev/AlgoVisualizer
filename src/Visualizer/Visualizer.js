@@ -77,6 +77,9 @@ const Visualizer = () => {
         <button onClick={generateArray} disabled={isSorting}>
           Regenerate
         </button>
+            <button onClick={stopSorting} disabled={!isSorting} style={{}}>
+              Stop Sorting
+            </button>
         <div className="button-container">
           <button
             onClick={() => handleSort(bubbleSort, 'Bubble Sort')}
@@ -96,7 +99,10 @@ const Visualizer = () => {
           >
             Insertion Sort
           </button>
-          <button onClick={() => handleSort(heapSort,'Heap Sort')} disabled={isSorting}>
+          <button
+            onClick={() => handleSort(heapSort, 'Heap Sort')}
+            disabled={isSorting}
+          >
             Heap Sort
           </button>
           {/* <button onClick={() => handleSort(mergeSort, 'Merge Sort')} disabled={isSorting}>
@@ -108,12 +114,7 @@ const Visualizer = () => {
         </div>
       </div>
       <div className="selected-sort">
-        {isSorting && <p>{selectedSort}</p>}
-        {isSorting && (
-          <button onClick={stopSorting} style={{}}>
-            Stop Sorting
-          </button>
-        )}
+        <div>{isSorting && <p className="sort-banner">{selectedSort}</p>}</div>
       </div>
       <div className="array-container">
         <div className="array-list">
