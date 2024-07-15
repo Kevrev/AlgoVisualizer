@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { MDBRange, MDBBtn } from 'mdb-react-ui-kit';
 import bubbleSort from '../utils/bubbleSort';
 import selectionSort from '../utils/selectionSort';
@@ -19,17 +19,17 @@ const Visualizer = () => {
     return Math.floor(Math.random() * (max - min)) + min;
   };
 
-  const generateArray = () => {
+  const generateArray = useCallback(() =>{
     const newArray = [];
     for (let i = 0; i < range; i++) {
       newArray.push(arrayRandom(1, 650));
     }
     setArray(newArray);
-  };
+  }, [range]);
 
   useEffect(() => {
     generateArray();
-  }, [range]);
+  }, [generateArray]);
 
   const handleSliderChange = (event) => {
     const value = parseInt(event.target.value);

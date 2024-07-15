@@ -7,7 +7,7 @@
 //         minIndex = j;
 //       }
 //     }
-//     if (minIndex != i) {
+//     if (minIndex !== i) {
 //       [array[i], array[minIndex]] = [array[minIndex], array[i]];
 //     }
 //   }
@@ -34,7 +34,7 @@ const selectionSort = async (array, setArray, setActiveIndex, breakSortingRef) =
         setActiveIndex(j);
       }
     }
-    if (minIndex != i) {
+    if (minIndex !== i) {
       [array[i], array[minIndex]] = [array[minIndex], array[i]];
       setArray([...array]);
       setActiveIndex(i);

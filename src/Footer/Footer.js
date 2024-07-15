@@ -5,12 +5,13 @@ const Footer = () => {
     <footer>
        <hr className="hr hr-blurry" />
         <div className="social-icon-container">
-          <a href="https://github.com/Kevrev/algoVisualizer" target="_blank">
+          <a href="https://github.com/Kevrev/algoVisualizer" target="_blank" rel="noreferrer">
             <MDBIcon fab icon="github" />
           </a>
           <a
             href="https://www.linkedin.com/in/kevin-small-a77152285/"
             target="_blank"
+            rel="noreferrer"
           >
             <MDBIcon fab icon="linkedin" />
           </a>

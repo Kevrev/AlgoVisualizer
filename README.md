@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+[![License: MIT license](https://img.shields.io/badge/License-MIT_license-success)](https://opensource.org/licenses/MIT)  
+![Project status](https://img.shields.io/badge/Status-In_Progress-yellow)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img src="./public/logo.png" alt="AlgoVisualizer"/></p>
 
-## Available Scripts
+## General Information
 
-In the project directory, you can run:
+AlgoVisualizer is a web application that allows users to see a visual representation of popular data sortings algorithims in action in order to gain/demonstrate an understanding of how they operate. Users can change the size of the dataset, generate a new one, and pick from a series of sorting algorithims to sort with.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [General Information](#general-information)
+- [Deployed Site](#deployed-site)
+- [Description](#description)
+- [Demo](#demo)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Contact](#contact)
+- [License](#license)
+- [How to Contribute](#how-to-contribute)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployed Site
 
-### `npm test`
+The deployed site can be found [here](https://kevrev.github.io/AlgoVisualizer/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+Users are given the ability to generate new random arrays along with the ability to change the size of the array they wish to sort. Each value in the array corresponds to the height of a 'block' shown in the visual representation. The currently included sorting algorithims are Bubble Sort, Insertion Sort, Selection Sort, Heap Sort, Quick Sort, and Merge Sort. The sorting operation is executed when one of the sort buttons is pressed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When a sorting operation is in progress, the 'Stop Sorting' button will appear and all other buttons will be disabled until either the operation completes or the 'Stop Sorting' button is pressed. The array is maintained in its current orientation after sorting and can continue to be sorted once a sorting operation is selected again.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React v18.3.1](https://reactjs.org/) - JavaScript library for building user interfaces.
+- [node.js v20.12.0](https://nodejs.org/en) - A scalable server-side JavaScript runtime;
+- [fontawesome v6.5.2]() - 
+- [mdb-react-ui-kit v8.0.0]() - 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Node.js](https://nodejs.org/en/)
 
-### Code Splitting
+### Clone
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the [repository](https://github.com/Kevrev/AlgoVisualizer) to your local machine.
 
-### Analyzing the Bundle Size
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Navigate to the root directory of the cloned repository in your terminal.
+3. Run `npm install` to install the dependencies.
+6. Start the full stack application by running `start` from the root directory.
+7. Navigate to `http://localhost:3000` in your browser to view the site.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+### Discover
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p align="center"><img src="" alt=""  width="1000"/></p>
 
-### Deployment
+### Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+<p align="center"><img src="" alt=""  width="1000"/></p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Upload
+
+<p align="center"><img src="" alt="" width="1000"/></p>
+
+### Cart
+
+
+<p align="center"><img src="" alt=""  width="1000"/></p>
+
+### Personal Page and Order History
+
+
+<p align="center"><img src="" alt=""  width="1000"/></p>
+
+---
+
+## Credits
+
+### Resources
+
+The following resources and individuals made invaluable contributions to the project:
+
+#### Fonts
+
+- [Roboto](https://fonts.google.com/specimen/Roboot?query=roboto) by 
+
+#### Images
+
+- [Shields.io](https://shields.io/) provides the badges for the README.
+
+#### Templates / Libraries
+
+
+#### Data
+
+### Educational
+
+## Contact
+
+- Kevin Small - [kevrev](https://github.com/Kevrev) / [LinkedIn](https://www.linkedin.com/in/kevin-small-a77152285/)
+
+---
+
+## License
+
+This project is open source and available under the [MIT License](./LICENSE).
+
+---
