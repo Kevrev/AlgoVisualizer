@@ -70,32 +70,33 @@ Clone the [repository](https://github.com/Kevrev/AlgoVisualizer) to your local m
 
 ### Slider
 
-
-
 <img src="./src/assets/images/slider.png" alt="Array Slider"  width="200"/>
+
+The slider is used to adjust the size of the Block Array, ranging from a minimum of 10 blocks to a maximum of 160 blocks.
 
 ### Regenerate
 
-
-
 <img src="./src/assets/images/generate.png" alt="Regenerate Array Button"  width="200"/>
+
+Generates a new Block Array with the current selected value of the slider. Disabled when a sorting opertaion is in progress.
 
 ### Stop Sorting
 
-
-
 <img src="./src/assets/images/stop.png" alt="Stop Sorting Button"  width="200"/>
+
+This becomes active when a sorting operation is in progress and can be used to stop the current sort. The array maintains its current position and sorting can be resumed by clicking on another sort. Disabled when no sorting operation is currently ongoing.
 
 ### Sorting Algorithims
 
-
-
 <img src="./src/assets/images/sorts.png" alt="Sorting Algorithim Buttons"/>
+
+Each button represent a sorting algoritihm function corresponding to their respective names. Pressing one button will execute that sorting operation and the block array will animate its change accordingly. The speed of each sorting function is not an accurate representation of each sorting algorithim's true speed as they have been slowed for the purpose of visual clarity. Disabled when a sorting opertaion is in progress.
 
 ### Block Array
 
-
 <img src="./src/assets/images/array.png" alt="Block Array" width="300"/>
+
+This is the randomly generated array with each of its values corresponding to the pixel height of a respective block. The values can range from a minimum of 1 to a maximum of 650, with duplicate values also being possible. The values of the block array will shift around when a sorting operation is ongoing. 
 
 ---
 
@@ -107,7 +108,7 @@ The following resources and individuals made invaluable contributions to the pro
 
 #### Fonts
 
-- [Roboto](https://fonts.google.com/specimen/Roboot?query=roboto) by 
+- [Roboto](https://fonts.google.com/specimen/Roboto) by Christian Robertson. Used as the default font for most of the text found on the page.
 
 #### Images
 
@@ -115,10 +116,7 @@ The following resources and individuals made invaluable contributions to the pro
 
 #### Templates / Libraries
 
-
-#### Data
-
-### Educational
+- [Material Design for Bootstrap 5 & React 18](https://mdbootstrap.com/docs/react/) was used for the interactive components such as the sliders and buttons as well as the icons for external site links like GitHub and LinkedIn.
 
 ## Contact
 
