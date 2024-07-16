@@ -54,6 +54,7 @@
 .slider-text {
   color: white;
   font-weight: bold;
+  text-align: center;
 }
 
 .selected-sort {

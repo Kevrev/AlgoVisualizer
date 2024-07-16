@@ -128,7 +128,7 @@ const Visualizer = () => {
             >
               Heap Sort
             </MDBBtn>
-            <MDBBtn
+            {/* <MDBBtn
               className="text-dark custom-btn"
               color="light"
               onClick={() => handleSort(mergeSort, 'Merge Sort')}
@@ -143,7 +143,7 @@ const Visualizer = () => {
               disabled={isSorting}
             >
               Quick Sort
-            </MDBBtn>
+            </MDBBtn> */}
           </div>
         </div>
       </div>
