@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { MDBRange, MDBBtn } from 'mdb-react-ui-kit';
-import bubbleSort from '../utils/bubbleSort';
-import selectionSort from '../utils/selectionSort';
-import insertionSort from '../utils/insertionSort';
-import heapSort from '../utils/heapSort';
-import mergeSort from '../utils/mergeSort';
-import quickSort from '../utils/quickSort';
+import bubbleSort from '../../utils/bubbleSort';
+import selectionSort from '../../utils/selectionSort';
+import insertionSort from '../../utils/insertionSort';
+import heapSort from '../../utils/heapSort';
+import mergeSort from '../../utils/mergeSort';
+import quickSort from '../../utils/quickSort';
 
 const Visualizer = () => {
   const [array, setArray] = useState([]);

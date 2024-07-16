@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './Header/Header'
-import './Header/Header.css';
-import Visualizer from './Visualizer/Visualizer';
-import './Visualizer/Visualizer.css';
-import Footer from './Footer/Footer'
-import './Footer/Footer.css';
+import Header from './Components/Header/Header';
+import './Components/Header/Header.css';
+import Visualizer from './Components/Visualizer/Visualizer';
+import './Components/Visualizer/Visualizer.css';
+import Footer from './Components/Footer/Footer';
 
 function App() {
-
   return (
     <div className="App">
       <Header />
