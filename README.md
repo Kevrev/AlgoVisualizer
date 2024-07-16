@@ -38,19 +38,18 @@ When a sorting operation is in progress, the 'Stop Sorting' button will appear a
 
 ## Dependencies
 
-- [React v18.3.1](https://reactjs.org/) - JavaScript library for building user interfaces.
-- [node.js v20.12.0](https://nodejs.org/en) - A scalable server-side JavaScript runtime;
-- [fontawesome v6.5.2]() - 
-- [mdb-react-ui-kit v8.0.0]() - 
+- [react v18.3.1](https://reactjs.org/) - JavaScript library for building reactive websites and user interfaces.
+- [node.js v20.12.0](https://nodejs.org/en) - A scalable server-side JavaScript runtime. Used for installing dependencies and running the application locally.
+- [fontawesome v6.5.2](https://fontawesome.com/) - A large icon library/toolkit. 
+- [mdb-react-ui-kit v8.0.0](https://mdbootstrap.com/docs/react/) - A UI Kit containing many different components, such as buttons and sliders, and allows them to be imported as React components.
 
 ---
 
 ## Installation
 
-
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/) - Node is necessarry to install the required dependencies as well as run/build the application locally. 
 
 ### Clone
 
@@ -58,37 +57,32 @@ Clone the [repository](https://github.com/Kevrev/AlgoVisualizer) to your local m
 
 ### Setup
 
-2. Navigate to the root directory of the cloned repository in your terminal.
-3. Run `npm install` to install the dependencies.
-6. Start the full stack application by running `start` from the root directory.
-7. Navigate to `http://localhost:3000` in your browser to view the site.
+1. Navigate to the root directory of the cloned repository in your terminal.
+2. Run `npm install` to install all of the required dependencies.
+3. Start the full stack application by running `npm start` from the root directory.
+4. Navigate to `http://localhost:3000` in your browser to view the site.
 
 ---
 
 ## Usage
 
-### Discover
+### Slider
 
-<p align="center"><img src="" alt=""  width="1000"/></p>
+<p align="center"><img src="./src/assets/slider.png" alt="Array Slider"  width="200"/></p>
 
-### Details
-
-
-<p align="center"><img src="" alt=""  width="1000"/></p>
-
-### Upload
-
-<p align="center"><img src="" alt="" width="1000"/></p>
-
-### Cart
+### Regenerate
 
 
-<p align="center"><img src="" alt=""  width="1000"/></p>
+<p align="center"><img src="./src/assets/generate.png" alt="Stop Sorting Button"  width="200"/></p>
 
-### Personal Page and Order History
+### Stop Sorting
+
+<p align="center"><img src="./src/assets/stop.png" alt="Stop Sorting Button"  width="200"/></p>
+
+### Sorting Algorithims
 
 
-<p align="center"><img src="" alt=""  width="1000"/></p>
+<p align="center"><img src="./src/assets/sorts.png" alt="Stop Sorting Button"/></p>
 
 ---
 
