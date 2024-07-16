@@ -1,7 +1,7 @@
 [![License: MIT license](https://img.shields.io/badge/License-MIT_license-success)](https://opensource.org/licenses/MIT)  
 ![Project status](https://img.shields.io/badge/Status-In_Progress-yellow)
 
-<p align="center"><img src="./public/logo.png" alt="AlgoVisualizer"/></p>
+<img src="./public/logo.png" alt="AlgoVisualizer"/>
 
 ## General Information
 
@@ -24,15 +24,17 @@ AlgoVisualizer is a web application that allows users to see a visual representa
 
 The deployed site can be found [here](https://kevrev.github.io/AlgoVisualizer/).
 
+## Preview
+
+<img src="./src/assets/images/preview.png" alt="Preview of Application"  width="800"/>
+
+---
+
 ## Description
 
 Users are given the ability to generate new random arrays along with the ability to change the size of the array they wish to sort. Each value in the array corresponds to the height of a 'block' shown in the visual representation. The currently included sorting algorithims are Bubble Sort, Insertion Sort, Selection Sort, Heap Sort, Quick Sort, and Merge Sort. The sorting operation is executed when one of the sort buttons is pressed.
 
 When a sorting operation is in progress, the 'Stop Sorting' button will appear and all other buttons will be disabled until either the operation completes or the 'Stop Sorting' button is pressed. The array is maintained in its current orientation after sorting and can continue to be sorted once a sorting operation is selected again.
-
----
-
-## Demo
 
 ---
 
@@ -68,21 +70,32 @@ Clone the [repository](https://github.com/Kevrev/AlgoVisualizer) to your local m
 
 ### Slider
 
-<p align="center"><img src="./src/assets/slider.png" alt="Array Slider"  width="200"/></p>
+
+
+<img src="./src/assets/images/slider.png" alt="Array Slider"  width="200"/>
 
 ### Regenerate
 
 
-<p align="center"><img src="./src/assets/generate.png" alt="Stop Sorting Button"  width="200"/></p>
+
+<img src="./src/assets/images/generate.png" alt="Regenerate Array Button"  width="200"/>
 
 ### Stop Sorting
 
-<p align="center"><img src="./src/assets/stop.png" alt="Stop Sorting Button"  width="200"/></p>
+
+
+<img src="./src/assets/images/stop.png" alt="Stop Sorting Button"  width="200"/>
 
 ### Sorting Algorithims
 
 
-<p align="center"><img src="./src/assets/sorts.png" alt="Stop Sorting Button"/></p>
+
+<img src="./src/assets/images/sorts.png" alt="Sorting Algorithim Buttons"/>
+
+### Block Array
+
+
+<img src="./src/assets/images/array.png" alt="Block Array" width="300"/>
 
 ---
 
