@@ -11,14 +11,13 @@ AlgoVisualizer is a web application that allows users to see a visual representa
 
 - [General Information](#general-information)
 - [Deployed Site](#deployed-site)
+- [Preview](#demo)
 - [Description](#description)
-- [Demo](#demo)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Credits](#credits)
 - [Contact](#contact)
 - [License](#license)
-- [How to Contribute](#how-to-contribute)
 
 ## Deployed Site
 
